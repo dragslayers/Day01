@@ -16,32 +16,25 @@ int chainelen(string x)
 int operation(string msg, string msg2)
 {
 
-    int len = chainelen(msg) - 1, len2 = chainelen(msg2) - 1;
+    int len = chainelen(msg), len2 = chainelen(msg2);
     int nbop = 0;
     bool in;
-    // cout << len <<endl;
-    // cout << len2 <<endl;
 
     for (int i = 0; i < len2; i++)
     {
         int j = 0;
-        in == false;
+        in = false;
         while (in == false && j != len2)
         {
             if (msg2[i] == msg[j])
             {
-                in == true;
-                break;
+                in = true;
             }
             j++;
         }
 
         if (in == false)
         {
-            cout << "i"
-                 << " : " << msg[i] << endl;
-            cout << "j"
-                 << " : " << msg2[j] << endl;
             nbop++;
         }
     }
@@ -51,6 +44,5 @@ int operation(string msg, string msg2)
 
 int main()
 {
-
     cout << operation("abc", "yabd");
 }
